@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel ="stylesheet" href ="../css/mycss.css">
+<style>
+  img {
+    width : 100px;
+    height : 100px;
+  }
+  
+  #inputimg{
+    width : 50px;
+    height : 50px;
+  }
+  
+  
+</style>
+
+<script>
+  function aa(){
+	  //window.alert("확인되었습니다!");
+	  
+	   let userName = document.ff.name.value
+	   let userId = document.ff.id.value;
+	   let color = document.ff.color.value;
+	   
+//	   var userName = document.ff.name.value
+//     let 대신 var 사용가능
+
+		//window.alert(color);
+		
+		//..body의 id이름을 이용한 접근 
+		let by = document.getElementById('body');
+		//배경색 바꾸기
+		by.style.backgroundColor = color; //#df12e2 
+		
+// 	   document.write("이름 :" + userName + "<br>");
+// 	   document.write("아이디 :" + userId );
+
+// 		window.alert("이름 : " + userName + "\n 아이디 : " + userId );
+	   
+  }
+</script>
+
+</head>
+<body id="body">
+<pre>
+  form input의 type
+  text, password, radio, checkbox, file
+  image, submit, reset, button
+  
+  전송을 실행하는 요소 :
+  type = 'image'
+  type = 'submit'
+  
+  type = 'button' : 아무런 기능이 없다. 기능을 부여하기 위해서 함수를 정의하고 호출한다.
+  함수정의 : funtion aa() {}
+  함수호출 : type = 'button' onclick='aa()'
+  
+  
+    스크립트에서 html body태그안에 요소로 접근하기
+   1. name을 이용해서 접근 / 입력된 값을 가져오기
+   document.ff.name.value
+   document.ff.id.value
+   2. id이름으로 접근
+   document.getElementById('id이름')
+</pre>
+  <form name="ff" action="input_type.jsp" method="post">
+    이름  <input type="text" name="name"><br>
+    아이디  <input type="text" name="id" value="aa"><br>
+    비밀번호 <input type="password" name="pass" value="1234"><br> 
+    주소  <input type="text" name="addr" value="대전"><br>
+    전화번호  <input type="text" name="tel" value="1234"><br>
+    성별 <input type="radio" name="gender" value="m">남자
+      <input type="radio" name="gender" value="f">여자
+   <br>   
+    좋아하는음식 <input type="checkbox" name="food" value="치킨">치킨
+            <input type="checkbox" name="food" value="피자">피자
+            <input type="checkbox" name="food" value="돈까스">돈까스
+            <input type="checkbox" name="food" value="해물찜">해물찜
+   <br>
+   
+   색상 : <input name = "color" type = "color"> <br>
+    파일 <input type="file" name="file"><br>
+      <input type="hidden" name="id2" value="a001">
+   이미지 <img name="img" src="../images/Koala.jpg">
+    <br><br>
+    
+  전송하기 (전송을 실행 : type="image" type="submit")<br> 
+    <input id="inputimg" type="image" src="../images/Koala.jpg">
+    <br>
+    <input type="submit" value="전송">
+    <input type="reset" value="취소">
+    <input type="button" value="확인" onclick="aa()">
+    <br>
+    
+  </form>
+</body>
+</html>

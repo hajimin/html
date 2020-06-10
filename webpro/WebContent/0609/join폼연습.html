@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- <link rel="stylesheet" href="..css/mycss.css"> -->
+<style>
+	form, h2{
+	width : 40%;
+    height : auto;
+	border : 2px solid blue;
+	padding : 20px;
+	margin : 20px auto;
+	}
+	label{
+    width : 100px;
+    height : 30px;
+    display : inline-block;
+  	}
+  	h2{
+  	border : none;
+  	text-align : center;
+  	}
+</style>
+
+
+
+</head>
+
+<body>
+<h2>회원가입 입력폼</h2>
+
+<form>
+     <form name="ff">
+         <label>이름</label> 
+         <input type = "text" name = "name" ><br>
+               
+         <label>주소</label> 
+         <input type = "text" name = "addr" ><br>
+         
+         <label>이메일</label> 
+         <input type = "email" name = "email"><br>
+         
+         <input type="radio" name="gender" value="male">
+         <label>Male</label><br>  
+      	 <input type="radio" name="gender" value="female">
+      	 <label>Female</label><br>  
+         
+    
+      <input type = "submit" value = "send">
+      <input type = "reset" value = "원래대로">
+
+</form>
+
+
+
+  <div id = "result">
+    
+  </div>
+
+</body>
+</html>
